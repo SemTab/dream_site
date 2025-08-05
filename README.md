@@ -10,7 +10,7 @@
 
 ---
 
-## 📸 Скриншоты проекта:
+## 📸 Скриншоты сайта:
 
 <div align="center">
   <div style="display: flex; overflow-x: auto; gap: 8px; padding-bottom: 8px;">
