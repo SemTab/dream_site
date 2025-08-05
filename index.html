@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Mobile - КРМП Мобайл с бонусом!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Unbounded:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Анимация для стартового бонуса */
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .bonus-animation {
+            animation: glow 3s infinite, float 6s ease-in-out infinite;
+            position: relative;
+        }
+        
+        .bonus-amount {
+            background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+            background-size: 200% auto;
+            animation: gradient 3s linear infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-montserrat">
+    <header class="fixed w-full py-4 z-50 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold font-unbounded bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text">DREAM MOBILE</a>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300">Особенности</a></li>
+                        <li><a href="#screenshots" class="text-gray-300 hover:text-white transition-colors duration-300">Скриншоты</a></li>
+                        <li><a href="richest.php" class="text-gray-300 hover:text-white transition-colors duration-300">Топ игроков</a></li>
+                        <li><a href="donate.php" class="text-gray-300 hover:text-white transition-colors duration-300">Донат</a></li>
+                        <li><a href="login.php" class="bg-blue-600 bg-opacity-10 border border-blue-500 border-opacity-40 px-5 py-2 rounded-full hover:bg-opacity-20 transition-all duration-300">Личный кабинет</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-gray-300 focus:outline-none menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden mobile-menu hidden bg-black bg-opacity-95 absolute w-full left-0 py-4 px-6 border-t border-gray-800 mt-4 animate-fadeIn">
+            <ul class="space-y-4">
+                <li><a href="#features" class="block text-gray-300 hover:text-white transition-colors duration-300">Особенности</a></li>
+                <li><a href="#screenshots" class="block text-gray-300 hover:text-white transition-colors duration-300">Скриншоты</a></li>
+                <li><a href="richest.php" class="block text-gray-300 hover:text-white transition-colors duration-300">Топ игроков</a></li>
+                <li><a href="donate.php" class="block text-gray-300 hover:text-white transition-colors duration-300">Донат</a></li>
+                <li><a href="login.php" class="block bg-blue-600 bg-opacity-10 border border-blue-500 border-opacity-40 px-5 py-2 rounded-full hover:bg-opacity-20 transition-all duration-300 w-full text-center mt-4">Личный кабинет</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 bg-gradient-radial"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col items-center text-center mb-16">
+                    <h1 class="text-4xl md:text-6xl font-bold font-unbounded mb-6 leading-tight animate-on-scroll opacity-0">
+                        <span class="bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text">DREAM MOBILE</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto animate-on-scroll opacity-0 delay-100">
+                        Новый онлайн-игра CRMP Mobile с бонусом. 
+                    </p>
+                    
+                    <!-- Анимированный блок с бонусом -->
+                    <div class="bonus-animation bg-gradient-to-r from-blue-600/20 to-blue-400/20 p-6 rounded-2xl mb-8 border border-blue-500/40 backdrop-filter backdrop-blur-sm animate-on-scroll opacity-0 delay-200 relative overflow-hidden">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-blue-300/20 rounded-2xl blur opacity-30"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <p class="font-bold text-xl">Стартовый бонус:</p>
+                            </div>
+                            <p class="bonus-amount text-3xl">50 000 000₽</p>
+                            <p class="text-sm text-blue-300 mt-2">Получи сразу после регистрации!</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#download" class="bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-full text-lg font-bold inline-block transition-all duration-500 animate-on-scroll opacity-0 delay-300 transform hover:scale-105">
+                        Скачать игру
+                    </a>
+                </div>
+                
+                <div class="relative mt-20 animate-on-scroll opacity-0 delay-400">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-blue-300 rounded-2xl blur opacity-30"></div>
+                    <img src="img/mockup.png" alt="Dream Mobile Preview" class="relative rounded-2xl shadow-2xl w-full object-cover z-10">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="py-24 bg-black relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-transparent"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-3xl md:text-5xl font-bold font-unbounded mb-16 text-center animate-on-scroll opacity-0">
+                    Особенности проекта
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="backdrop-blur-sm bg-white/5 rounded-3xl p-8 transition-all duration-500 animate-on-scroll opacity-0 delay-200">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 font-unbounded text-center">Стартовый бонус</h3>
+                        <p class="text-gray-400 text-center">Начни игру с капиталом в 50 миллионов игровых рублей. Для всех новых игроков!</p>
+                    </div>
+
+                    <div class="backdrop-blur-sm bg-white/5 rounded-3xl p-8 transition-all duration-500 animate-on-scroll opacity-0 delay-400">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 font-unbounded text-center">Лучшая графика</h3>
+                        <p class="text-gray-400 text-center">От которой не хочется уходить с игры!</p>
+                    </div>
+                    
+                    <div class="backdrop-blur-sm bg-white/5 rounded-3xl p-8 transition-all duration-500 animate-on-scroll opacity-0 delay-500">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 font-unbounded text-center">Красивая карта</h3>
+                        <p class="text-gray-400 text-center">Проработанный до мелочей игровой мир с уникальными локациями и живой атмосферой.</p>
+                    </div>
+                    
+                    <div class="backdrop-blur-sm bg-white/5 rounded-3xl p-8 transition-all duration-500 animate-on-scroll opacity-0 delay-600">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 font-unbounded text-center">Множество скинов и машин</h3>
+                        <p class="text-gray-400 text-center">Niva, Bmw, Mercedes, Audi, Porsche, Lamborghini, Ferrari, и многое другое. Также: Клава Кока, Бустер, Человек-Паук и много кто другой.</p>
+                    </div>
+
+                    <div class="backdrop-blur-sm bg-white/5 rounded-3xl p-8 transition-all duration-500 animate-on-scroll opacity-0 delay-700">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 font-unbounded text-center">Удобный интерфейс</h3>
+                        <p class="text-gray-400 text-center">Интуитивно понятное управление, адаптированное специально для мобильных устройств.</p>
+                    </div>
+                    
+                    <div class="backdrop-blur-sm bg-white/5 rounded-3xl p-8 transition-all duration-500 animate-on-scroll opacity-0 delay-800">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 font-unbounded text-center">Отличная администрация</h3>
+                        <p class="text-gray-400 text-center">На нашем проекте наша администрация всегда готова помочь в любых ситуациях.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section id="screenshots" class="py-24 bg-black">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-5xl font-bold font-unbounded mb-16 text-center animate-on-scroll opacity-0">
+                    Скриншоты
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="rounded-3xl overflow-hidden transition-all duration-500 animate-on-scroll opacity-0 delay-100 group">
+                        <img src="img/screenshot1.jpg" alt="Screenshot 1" class="w-full transition-all duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="rounded-3xl overflow-hidden transition-all duration-500 animate-on-scroll opacity-0 delay-200 group">
+                        <img src="img/screenshot2.jpg" alt="Screenshot 2" class="w-full transition-all duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="rounded-3xl overflow-hidden transition-all duration-500 animate-on-scroll opacity-0 delay-300 group">
+                        <img src="img/screenshot3.jpg" alt="Screenshot 3" class="w-full transition-all duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download -->
+        <section id="download" class="py-32 bg-black relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-transparent"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-5xl font-bold font-unbounded mb-6 animate-on-scroll opacity-0">
+                        Готов начать?
+                    </h2>
+                    <p class="text-xl mb-12 mx-auto text-gray-300 animate-on-scroll opacity-0 delay-100">
+                        Присоединяйся к тысячам игроков в Dream Mobile и начни свой путь с бонусом 50 000 000₽ прямо сейчас!
+                    </p>
+                    <div class="mb-10 animate-on-scroll opacity-0 delay-200">
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-full text-xl font-bold inline-block transition-all duration-500 transform hover:scale-105">
+                            НАЧАТЬ ИГРАТЬ
+                        </a>
+                    </div>
+
+                    <div class="mt-20 flex flex-wrap justify-center gap-6 animate-on-scroll opacity-0 delay-400">
+                        <a href="https://t.me/dream_bonus" class="bg-black border border-blue-500/30 rounded-full px-8 py-3 flex items-center hover:border-blue-500 transition-all duration-300">
+                            <span class="text-white">Telegram</span>
+                        </a>
+                        <a href="https://vk.com/dreammobile.online" class="bg-black border border-blue-500/30 rounded-full px-8 py-3 flex items-center hover:border-blue-500 transition-all duration-300">
+                            <span class="text-white">VK</span>
+                        </a>
+                        <a href="https://forum.dmobile.icu" class="bg-black border border-blue-500/30 rounded-full px-8 py-3 flex items-center hover:border-blue-500 transition-all duration-300">
+                            <span class="text-white">Форум</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 bg-black border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="/" class="text-2xl font-bold font-unbounded bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text mb-6 md:mb-0">DREAM MOBILE</a>
+                <div class="flex space-x-6">
+                    <a href="privacy-policy.php" class="text-gray-500 hover:text-gray-300 transition-colors">Политика конфиденциальности</a>
+                    <a href="terms.php" class="text-gray-500 hover:text-gray-300 transition-colors">Оферта</a>
+                </div>
+                <div class="text-gray-500 text-sm mt-6 md:mt-0">© 2025 Dream Mobile. Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html> 

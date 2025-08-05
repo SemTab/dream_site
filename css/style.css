@@ -1,0 +1,277 @@
+/* Custom styles for Dream Mobile */
+
+/* Font family settings */
+.font-unbounded {
+    font-family: 'Unbounded', cursive;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header scrolling effect */
+#main-header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+#main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 30px rgba(0, 70, 250, 0.1);
+}
+
+/* Custom radial gradient for hero */
+.bg-gradient-radial {
+    background: radial-gradient(circle at 50% 10%, rgba(0, 112, 243, 0.12), transparent 65%);
+}
+
+/* Animation delays */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-on-scroll {
+    will-change: transform, opacity;
+}
+
+.animate-on-scroll.visible {
+    animation: fadeInUp 0.7s ease forwards;
+}
+
+/* Gradient border effect */
+.gradient-border {
+    position: relative;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #0070f3, #00d4ff);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Glassmorphism effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0070f3, #00d4ff);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0070f3, #00a0ff);
+}
+
+/* Button hover effect */
+.btn-hover-effect {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.btn-hover-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 112, 243, 0), rgba(0, 212, 255, 0.2), rgba(0, 112, 243, 0));
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+}
+
+.btn-hover-effect:hover::after {
+    transform: translateX(100%);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    h2 {
+        font-size: 2rem !important;
+    }
+}
+
+/* Gradient text animation */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient-text {
+    background: linear-gradient(90deg, #0070f3, #00d4ff, #0070f3);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientFlow 8s ease infinite;
+}
+
+/* Smooth image loading */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img.loading {
+    opacity: 0;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Background gradient for hero section */
+.hero-bg {
+    background: linear-gradient(135deg, rgba(0, 112, 243, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
+}
+
+/* Custom hover effects */
+.hover-grow {
+    transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+    transform: scale(1.05);
+}
+
+/* Custom gradient text */
+.gradient-text {
+    background: linear-gradient(90deg, #0070f3, #00d4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Custom button styles */
+.btn-primary {
+    background: linear-gradient(90deg, #0070f3, #00d4ff);
+    border-radius: 8px;
+    padding: 12px 24px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 112, 243, 0.4);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 112, 243, 0.6);
+}
+
+/* Custom card styles */
+.card {
+    background-color: #1f2937;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 112, 243, 0.2);
+}
+
+/* Hero section background image with overlay */
+.hero-section {
+    background-image: url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 112, 243, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 2;
+} 
