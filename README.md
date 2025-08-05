@@ -1,7 +1,7 @@
-<h1 align="center">🌐 DreamSite</h1>
+<h1 align="center">🌐 Сайт проекта - "DREAM MOBILE"</h1>
 
 <p align="center">
-  Official website of the Dream Mobile project — fast, modern and stylish.
+  Оффициальный сайт проекта Dream Mobile. Отлично подойдет для вашего проекта
 </p>
 
 <p align="center">
@@ -10,16 +10,9 @@
 
 ---
 
-## 🚀 Live Demo
-
-[View DreamSite](https://semtab.github.io/dream_site/) *(если подключён GitHub Pages)*
-
----
-
 ## 📸 Gallery: Screenshots
 
 <div align="center">
-  <p>Swipe → or scroll horizontally to navigate</p>
   <div style="display: flex; overflow-x: auto; gap: 8px; padding-bottom: 8px;">
     <img src="screen/Снимок экрана (19).png" width="300" alt="Screenshot 19" />
     <img src="screen/Снимок экрана (20).png" width="300" alt="Screenshot 20" />
@@ -29,17 +22,5 @@
   </div>
 </div>
 
-> *Если GitHub не отображает горизонтальный скролл — изображения автоматически пойдут вниз или станут вертикальными.*
 
----
-
-## ⚙️ Tech Stack
-
-- HTML5
-- CSS3 (Flexbox/Grid)
-- JavaScript (Vanilla or framework, если используется)
-
----
-
-## 📁 Repository Structure
 
